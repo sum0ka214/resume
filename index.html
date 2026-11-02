@@ -95,6 +95,19 @@ footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:
   <section>
     <h2>Projects</h2>
     <div class="proj">
+      <h3>進銷存管理系統<span>職訓專題 · C# Windows Forms · SQL Server</span></h3>
+      <p>由銷售管理系統擴充而成，首次執行自動建立 12 個資料表、1 個檢視表與範例資料。涵蓋客戶、廠商、產品、銷售單與進貨單（主檔＋明細）維護，並提供庫存量報表、銷售／進貨統計、單據列印與資料庫備份還原。登入分為管理者與一般人員權限。</p>
+      <p>重點在資料一致性：單據儲存使用 Transaction，銷貨扣庫存、進貨加庫存，庫存不足則整張單據不儲存；更正或刪除單據時先還原原本的庫存影響再重算，每次異動都寫入庫存異動紀錄。</p>
+    </div>
+    <div class="proj">
+      <h3>銷售管理系統<span>職訓作業 · C# Windows Forms · SQL Server</span></h3>
+      <p>客戶、產品（含商品照片）、付款方式的新增／修改／刪除，購物車選購與結帳，並可依條件查詢、排序及列印銷售主檔與明細。</p>
+    </div>
+    <div class="proj">
+      <h3>購物車程式<span>職訓作業 · C# Windows Forms</span></h3>
+      <p>以 SortedList 管理商品、List 搭配 Tuple 管理購物車，透過 DataGridView 呈現商品與購物車內容，選取商品時載入對應圖片，並計算數量與總金額。</p>
+    </div>
+    <div class="proj">
       <h3>智慧屋系統<span>大學畢業專題 · 程式開發負責人 · 約半年</span></h3>
       <p>獨立負責專題全部程式開發：讀取感測器數據、判斷條件，並控制燈光與家電。開發期間遇到程式優化問題，透過整理問題紀錄與老師討論找出原因，最終讓系統穩定運作並完成發表。這段經驗讓我習慣用紀錄和驗證找出問題根源，而不是憑直覺反覆修改。</p>
     </div>
@@ -107,7 +120,7 @@ footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:
   <section>
     <h2>Skills</h2>
     <dl>
-      <dt>語言</dt><dd>Python（物件導向設計）、C#、SQL</dd>
+      <dt>語言</dt><dd>Python（物件導向設計）、C#（Windows Forms）、SQL</dd>
       <dt>資料處理</dt><dd>pandas、NumPy、檔案與 CSV ／ Excel 處理</dd>
       <dt>資料庫</dt><dd>MSSQL、Python 資料庫連線</dd>
       <dt>企業系統</dt><dd>ERP 流程與應用</dd>
