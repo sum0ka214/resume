@@ -33,6 +33,7 @@
 
 ```
 ├── index.html   # 履歷網頁本體
+├── works/       # 作品截圖與完整操作報告（PDF）
 ├── .nojekyll    # 讓 GitHub Pages 不經過 Jekyll，直接顯示 HTML
 └── README.md
 ```
