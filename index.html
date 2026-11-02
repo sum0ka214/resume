@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>陳昱瑋 Chen Yu Wei</title>
+<meta name="description" content="陳昱瑋 Chen Yu Wei — 軟體工程師求職中｜Python、SQL、C#、ERP">
+<meta property="og:title" content="陳昱瑋 Chen Yu Wei">
+<meta property="og:description" content="軟體工程師求職中｜Python、SQL、C#、ERP">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d6e78'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='monospace'>CY</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f5f7f8; --surface:#ffffff; --fg:#14212b; --muted:#5b6b77; --line:#d9e1e6;
+  --accent:#0d6e78; --accent-soft:#e2f0f1; --code:#7a4bb3;
+  --f-display:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#16212a; --fg:#e4ecf0; --muted:#93a4b0; --line:#26343f;
+  --accent:#4fc3cc; --accent-soft:#163a40; --code:#c5a3f0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#16212a; --fg:#e4ecf0; --muted:#93a4b0; --line:#26343f;
+  --accent:#4fc3cc; --accent-soft:#163a40; --code:#c5a3f0; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.75}
+.wrap{max-width:760px;margin:0 auto;padding-block:56px 72px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:56px}
+.prompt{font-family:var(--f-mono);font-size:13px;color:var(--muted);letter-spacing:.02em}
+.prompt b{color:var(--code);font-weight:500}
+header{display:flex;flex-direction:column;gap:14px}
+h1{font-family:var(--f-display);font-weight:900;font-size:clamp(40px,9vw,64px);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1 small{display:block;font-family:var(--f-mono);font-weight:500;font-size:clamp(15px,3vw,18px);color:var(--accent);letter-spacing:.12em;margin-top:10px}
+.role{font-size:19px;font-weight:500;margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.motto{margin:0;font-size:17px;color:var(--muted);letter-spacing:.3em}
+.proj{display:flex;flex-direction:column;gap:6px;padding:18px 20px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.proj h3{margin:0;font-size:18px;font-weight:700;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.proj h3 span{font-family:var(--f-mono);font-size:12.5px;font-weight:400;color:var(--muted)}
+.proj p{font-size:15px}
+.tag{font-family:var(--f-mono);font-size:13px;padding:3px 10px;border-radius:4px;background:var(--accent-soft);color:var(--accent)}
+section{display:flex;flex-direction:column;gap:16px}
+h2{font-family:var(--f-mono);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0;
+  display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+p{margin:0;max-width:65ch}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-family:var(--f-mono);font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.06em;background:var(--bg)}
+td.mono,td .mono{font-family:var(--f-mono);font-size:13.5px;font-variant-numeric:tabular-nums}
+td .sub{display:block;font-size:13px;color:var(--muted)}
+.code{color:var(--code)}
+.foot{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.foot a{color:var(--accent)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 24px;margin:0}
+dt{font-family:var(--f-mono);font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+dd{margin:0;min-width:0}
+dd strong{font-weight:700}
+@media (max-width:480px){dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:12px}}
+.traits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.trait{display:flex;flex-direction:column;gap:6px;min-width:0}
+.trait h3{margin:0;font-size:17px;font-weight:700}
+.trait p{font-size:15px;color:var(--muted)}
+footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="prompt"><b>SELECT</b> * <b>FROM</b> candidates <b>WHERE</b> name = 'Chen Yu Wei';</div>
+    <h1>陳昱瑋<small>CHEN YU WEI</small></h1>
+    <p class="motto">自律　自信　自省</p>
+    <p class="role">軟體工程師求職中　·　新竹 ／ 桃園</p>
+    <div class="tags">
+      <span class="tag">#Python</span><span class="tag">#SQL</span><span class="tag">#C#</span><span class="tag">#ERP</span><span class="tag">#理工跨領域</span><span class="tag">#可配合輪班</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>光電與材料工程學系畢業，跨領域投入軟體開發。2026 年陸續取得 IT Specialist 國際認證 Python、Databases（SQL）、Software Development（C#），以及 ERP 軟體應用師證照，具備程式設計、資料庫操作與企業系統流程的基礎能力。目前於勞動力發展署參加職業訓練，持續精進開發實務。</p>
+    <p>理工背景讓我習慣以邏輯與數據拆解問題，面對新技術能快速上手。期望加入團隊，從後端開發扎根成長。</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="proj">
+      <h3>智慧屋系統<span>大學畢業專題 · 程式開發負責人 · 約半年</span></h3>
+      <p>獨立負責專題全部程式開發：讀取感測器數據、判斷條件，並控制燈光與家電。開發期間遇到程式優化問題，透過整理問題紀錄與老師討論找出原因，最終讓系統穩定運作並完成發表。這段經驗讓我習慣用紀錄和驗證找出問題根源，而不是憑直覺反覆修改。</p>
+    </div>
+    <div class="proj">
+      <h3>成績分析程式<span>職訓課程實作 · Python</span></h3>
+      <p>分別以 NumPy 與 pandas 實作排名計算（同分同名次）、排序與條件篩選，比較兩種寫法的差異與適用情境。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl>
+      <dt>語言</dt><dd>Python（物件導向設計）、C#、SQL</dd>
+      <dt>資料處理</dt><dd>pandas、NumPy、檔案與 CSV ／ Excel 處理</dd>
+      <dt>資料庫</dt><dd>MSSQL、Python 資料庫連線</dd>
+      <dt>企業系統</dt><dd>ERP 流程與應用</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>證照</th><th>範疇</th><th>取得日期</th><th>證號 ／ 驗證碼</th></tr></thead>
+        <tbody>
+          <tr><td>IT Specialist — Python<span class="sub">Certiport / Pearson</span></td><td>程式設計</td><td class="mono">2026-09-22</td><td class="mono code">w98mG-H94r</td></tr>
+          <tr><td>IT Specialist — Databases<span class="sub">Certiport / Pearson</span></td><td>SQL、資料庫設計</td><td class="mono">2026-10-13</td><td class="mono code">w97T7-H94A</td></tr>
+          <tr><td>IT Specialist — Software Development<span class="sub">Certiport / Pearson</span></td><td>C#、軟體開發基礎</td><td class="mono">2026-10-28</td><td class="mono code">sMNN-XMzz</td></tr>
+          <tr><td>ERP 軟體應用師<span class="sub">中華企業資源規劃學會（CERPS）</span></td><td>企業資源規劃流程</td><td class="mono">—</td><td class="mono code">GP0127344231</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="foot">ITS 證照可於 <a href="https://verify.certiport.com" target="_blank" rel="noopener">verify.certiport.com</a> 輸入驗證碼查證</div>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <dl>
+      <dt>2026 —</dt><dd>勞動力發展署 職訓課程「115 ERP 課程」（進行中）</dd>
+      <dt>2025.06</dt><dd><strong>中華大學</strong> 光電與材料工程學系 畢業<br>畢業專題：智慧屋系統</dd>
+      <dt>兵役</dt><dd>已役畢</dd>
+      <dt>高中</dt><dd>學生會幹部，培養溝通協調與團隊合作能力</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Strengths</h2>
+    <div class="traits">
+      <div class="trait"><h3>邏輯拆解</h3><p>遇到問題先查資料、試解法、整理紀錄，再找人討論，除錯有條理。</p></div>
+      <div class="trait"><h3>快速學習</h3><p>2026 年 9 至 10 月間連續取得三張 ITS 國際認證，跨入軟體領域。</p></div>
+      <div class="trait"><h3>壓力下決策</h3><p>校園盃撲克策略競賽第 8 名，擅長機率分析與在資訊不完整時做判斷。</p></div>
+    </div>
+  </section>
+
+  <footer>聯絡方式請參考 104 履歷 · Last updated 2026-11</footer>
+</main>
+</body>
+</html>
