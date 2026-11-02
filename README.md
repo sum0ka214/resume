@@ -8,12 +8,22 @@
 
 - 🎓 中華大學 光電與材料工程學系（2025 畢業），畢業專題「智慧屋系統」由我負責程式開發
 - 🏫 2026.11 從勞動力發展署「115 ERP 課程」職訓結訓
-- 💻 技能：Python、C#、SQL（MSSQL）、pandas、NumPy、ERP 流程
+- 💻 技能：Python、C#（Windows Forms）、SQL（MSSQL）、pandas、NumPy、ERP 流程
 - 📜 證照：
   - IT Specialist — Python
   - IT Specialist — Databases
   - IT Specialist — Software Development（C#）
   - ERP 軟體應用師（CERPS）
+
+## 專題作品
+
+| 專題 | 技術 | 重點 |
+| --- | --- | --- |
+| 進銷存管理系統 | C# Windows Forms、SQL Server | 用 Transaction 處理進貨、銷貨與庫存，確保資料一致；有權限分級、報表、備份還原 |
+| 銷售管理系統 | C# Windows Forms、SQL Server | 客戶／產品／付款方式管理、購物車結帳、查詢與列印 |
+| 購物車程式 | C# Windows Forms | SortedList、List + Tuple、DataGridView |
+| 成績分析程式 | Python、NumPy、pandas | 排名（同分同名次）、排序、條件篩選 |
+| 智慧屋系統 | 大學畢業專題 | 讀取感測器數據，控制燈光與家電 |
 
 完整的專題、技能、證照與經歷都在 👉 [個人網站](https://sum0ka214.github.io/resume/)。
 
