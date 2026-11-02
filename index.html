@@ -72,6 +72,16 @@ dd strong{font-weight:700}
 .trait h3{margin:0;font-size:17px;font-weight:700}
 .trait p{font-size:15px;color:var(--muted)}
 footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:8px}
+.shot{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--muted);font-size:13px;min-width:0}
+.shot img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:1px solid var(--line);border-radius:4px;background:var(--bg);transition:border-color .15s}
+.shot:hover img,.shot:focus-visible img{border-color:var(--brand)}
+.doc{align-self:flex-start;margin-top:6px;font-family:var(--f-mono);font-size:13px;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
+.doc::before{content:"↗ "}
+.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:94vh}
+.lb::backdrop{background:rgba(0,0,0,.82)}
+.lb img{display:block;max-width:100%;max-height:86vh;height:auto;border-radius:4px}
+.lb p{margin:8px 0 0;color:#f0ece8;font-size:14px;text-align:center;max-width:none}
 </style>
 </head>
 <body>
@@ -98,14 +108,31 @@ footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:
       <h3>進銷存管理系統<span>職訓專題 · C# Windows Forms · SQL Server</span></h3>
       <p>由銷售管理系統擴充而成，首次執行自動建立 12 個資料表、1 個檢視表與範例資料。涵蓋客戶、廠商、產品、銷售單與進貨單（主檔＋明細）維護，並提供庫存量報表、銷售／進貨統計、單據列印與資料庫備份還原。登入分為管理者與一般人員權限。</p>
       <p>重點在資料一致性：單據儲存使用 Transaction，銷貨扣庫存、進貨加庫存，庫存不足則整張單據不儲存；更正或刪除單據時先還原原本的庫存影響再重算，每次異動都寫入庫存異動紀錄。</p>
+      <div class="shots">
+        <a class="shot" href="works/inventory-main.webp"><img src="works/inventory-main.webp" alt="進銷存管理系統主畫面" width="1042" height="672" loading="lazy"><span>主畫面與營運摘要</span></a>
+        <a class="shot" href="works/inventory-order.webp"><img src="works/inventory-order.webp" alt="銷售單主檔與明細檔維護畫面" width="1226" height="793" loading="lazy"><span>銷售單（主檔／明細）</span></a>
+        <a class="shot" href="works/inventory-report.webp"><img src="works/inventory-report.webp" alt="庫存量報表，標示低於安全存量" width="1166" height="733" loading="lazy"><span>庫存量報表</span></a>
+      </div>
+      <a class="doc" href="works/inventory-report.pdf" target="_blank" rel="noopener">完整操作報告（PDF · 18 頁）</a>
     </div>
     <div class="proj">
       <h3>銷售管理系統<span>職訓作業 · C# Windows Forms · SQL Server</span></h3>
       <p>客戶、產品（含商品照片）、付款方式的新增／修改／刪除，購物車選購與結帳，並可依條件查詢、排序及列印銷售主檔與明細。</p>
+      <div class="shots">
+        <a class="shot" href="works/sales-cart.webp"><img src="works/sales-cart.webp" alt="購物車與結帳畫面" width="1008" height="671" loading="lazy"><span>購物車與結帳</span></a>
+        <a class="shot" href="works/sales-records.webp"><img src="works/sales-records.webp" alt="銷售紀錄查詢，主檔與明細" width="880" height="582" loading="lazy"><span>銷售紀錄查詢</span></a>
+        <a class="shot" href="works/sales-product.webp"><img src="works/sales-product.webp" alt="產品資料維護畫面，含產品相片" width="880" height="521" loading="lazy"><span>產品資料（含相片）</span></a>
+      </div>
+      <a class="doc" href="works/sales-report.pdf" target="_blank" rel="noopener">完整操作報告（PDF · 21 頁）</a>
     </div>
     <div class="proj">
       <h3>購物車程式<span>職訓作業 · C# Windows Forms</span></h3>
       <p>以 SortedList 管理商品、List 搭配 Tuple 管理購物車，透過 DataGridView 呈現商品與購物車內容，選取商品時載入對應圖片，並計算數量與總金額。</p>
+      <div class="shots">
+        <a class="shot" href="works/cart-add.webp"><img src="works/cart-add.webp" alt="加入商品到購物車，數量累加" width="1316" height="800" loading="lazy"><span>加入購物車</span></a>
+        <a class="shot" href="works/cart-checkout.webp"><img src="works/cart-checkout.webp" alt="結帳完成並顯示帳單明細" width="1316" height="800" loading="lazy"><span>結帳明細</span></a>
+      </div>
+      <a class="doc" href="works/cart-report.pdf" target="_blank" rel="noopener">完整操作報告（PDF · 10 頁）</a>
     </div>
     <div class="proj">
       <h3>智慧屋系統<span>大學畢業專題 · 程式開發負責人 · 約半年</span></h3>
@@ -164,5 +191,22 @@ footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);border-top:
 
   <footer>聯絡方式請參考 104 履歷 · Last updated 2026-11</footer>
 </main>
+<dialog class="lb" id="lb"><img alt=""><p></p></dialog>
+<script>
+(function(){
+  var lb=document.getElementById('lb');
+  if(!lb||!lb.showModal)return;
+  var img=lb.querySelector('img'),cap=lb.querySelector('p');
+  document.querySelectorAll('.shot').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;
+      cap.textContent=a.querySelector('span').textContent;
+      lb.showModal();
+    });
+  });
+  lb.addEventListener('click',function(){lb.close()});
+})();
+</script>
 </body>
 </html>
